@@ -31,7 +31,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-20'
+modified: '2026-08-15'
 tags:
 - Company
 - Healthcare
@@ -55,11 +55,49 @@ common:
 - type: PrivacyPolicy
   url: https://nonnatech.com/privacy-policy/
 - type: Support
+  url: https://nonnatech.com/about/contact-information/
+- type: FAQ
   url: https://nonnatech.com/faqs/
+- type: Blog
+  url: https://nonnatech.com/about/awards-and-news/
+- type: BlogRSS
+  url: https://nonnatech.com/feed/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/nonnatech
+- type: Twitter
+  url: https://twitter.com/nonnatech
 - type: DomainSecurity
   url: security/nonnatech-domain-security.yml
+- type: Conformance
+  url: conformance/nonnatech-conformance.yml
+- type: Plans
+  url: plans/nonnatech-plans-pricing.yml
+- type: LLMsTxt
+  url: llms/nonnatech-llms.txt
 x-enrichment:
-  date: '2026-07-20'
+  date: '2026-08-15'
   status: minimal
-  artifacts_added: 1
+  artifacts_added: 4
   pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Nonnatech ships an end-user clinician dashboard at app.nonnatech.com and
+    markets EHR integration as a delivered service, but the word "API" appears
+    nowhere on its 22-page WordPress site and every contract-discovery path
+    (/openapi.json, /swagger.json, /graphql, /mcp, /api-docs, /llms.txt and all
+    seven /.well-known/ documents) returns 404 on both the marketing host and the
+    dashboard host.
+  evidence:
+  - url: https://app.nonnatech.com/openapi.json
+    status: 404
+  - url: https://app.nonnatech.com/graphql
+    status: 404
+  - url: https://nonnatech.com/developers
+    status: 404
+  - url: https://nonnatech.com/.well-known/api-catalog
+    status: 404
+  - url: https://nonnatech.com/page-sitemap.xml
+    status: 200
+  checked: '2026-08-15'
