@@ -1,0 +1,58 @@
+generated: '2026-08-15'
+method: searched
+source: https://nonnatech.com/solutions-the-nonnatech-difference/real-time-analytics/
+note: >-
+  Nonnatech publishes no trust center, no certifications page and no compliance
+  program page. The only compliance posture stated publicly is a HIPAA claim made
+  in marketing copy on the solutions pages ("HIPAA-compliant platform",
+  "HIPAA-secured data platform"). That is a self-assertion in prose, not a
+  published attestation, audit report, or certification listing — so this file
+  records the claim and its source, and apis.yml deliberately carries NO
+  `Compliance` pointer. The site's privacy policy is generic WordPress
+  cookie/comment boilerplate and contains no HIPAA or HITECH notice. No API
+  contract exists for this provider, so every API-level standard below is
+  recorded as not-established rather than false-by-derivation.
+standards:
+- id: hipaa
+  conforms: claimed
+  evidence: >-
+    Marketing copy states the platform is "fully integrated into our
+    HIPAA-compliant platform" and "System is fully HIPAA-compliant and secure for
+    all licensed users."
+  evidence_url: https://nonnatech.com/solutions-the-nonnatech-difference/real-time-analytics/
+  attestation_published: false
+- id: soc2
+  conforms: false
+  evidence: No SOC 2 claim, report, or trust page found on the public site.
+- id: iso-27001
+  conforms: false
+  evidence: No ISO 27001 claim found on the public site.
+- id: hitrust
+  conforms: false
+  evidence: No HITRUST claim found on the public site.
+- id: fhir-r4
+  conforms: unknown
+  evidence: >-
+    Site says the platform "can be fully integrated into existing EHRs" and is
+    "device agnostic", but names no interoperability standard (FHIR, HL7 v2,
+    SMART on FHIR) and publishes no integration documentation.
+- id: hl7-v2
+  conforms: unknown
+  evidence: Same as fhir-r4 — EHR integration marketed, no standard named.
+- id: oauth2
+  conforms: unknown
+  evidence: No public API, no securitySchemes, no OAuth discovery document served.
+- id: rfc9457-problem-details
+  conforms: unknown
+  evidence: No public API contract to evaluate.
+evidence:
+- url: https://nonnatech.com/solutions-the-nonnatech-difference/real-time-analytics/
+  status: 200
+- url: https://nonnatech.com/privacy-policy/
+  status: 200
+- url: https://nonnatech.com/trust
+  status: 404
+- url: https://nonnatech.com/compliance
+  status: 404
+- url: https://nonnatech.com/security
+  status: 404

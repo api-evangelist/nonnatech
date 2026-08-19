@@ -1,0 +1,28 @@
+generated: '2026-08-15'
+method: searched
+source: https://nonnatech.com/request-a-demo/
+plan_count: 0
+pricing_model: contact-sales
+currency: null
+note: >-
+  Nonnatech publishes no pricing page, no plan tiers and no rate card. Every
+  commercial path on the site funnels to a "Request a Demo" form, where the
+  company states a representative will provide "product information, pricing and
+  demo" on a call. Marketing copy elsewhere on the site says the RPM program is
+  offered to providers with no upfront cost and that services are reimbursable
+  under Medicare CPT codes 99453, 99454, 99457 and 99458, but no dollar figures,
+  tiers, quotas or overage terms are published anywhere on the public site. This
+  is a recorded zero, not an unchecked field.
+plans: []
+evidence:
+- url: https://nonnatech.com/request-a-demo/
+  status: 200
+  note: Contact form; no prices listed.
+- url: https://nonnatech.com/page-sitemap.xml
+  status: 200
+  note: Full page inventory (22 pages) contains no pricing or plans page.
+- url: https://nonnatech.com/faqs/
+  status: 200
+  note: >-
+    Insurance-coverage FAQ names Medicare RPM CPT codes but states co-pays
+    "vary by health plan"; no Nonnatech price is published.
